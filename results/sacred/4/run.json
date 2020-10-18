@@ -1,0 +1,121 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/jovyan/tmc_repo/src",
+    "dependencies": [
+      "munch==2.3.2",
+      "numpy==1.15.2",
+      "PyYAML==3.13",
+      "sacred==0.7.2",
+      "torch==0.4.1"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_7f78e11d4b0c272c98119b438a3a89ab.py"
+      ],
+      [
+        "run.py",
+        "_sources/run_6ca9b6400404686fe9ce3eeddb14c41f.py"
+      ],
+      [
+        "utils/logging.py",
+        "_sources/logging_42f1e6b7281693f05c7ab5e124dee179.py"
+      ]
+    ]
+  },
+  "heartbeat": "2020-02-19T22:52:13.135800",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) CPU E5-2667 v4 @ 3.20GHz",
+    "gpus": {
+      "driver_version": "410.93",
+      "gpus": [
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        },
+        {
+          "model": "GeForce GTX 1080 Ti",
+          "persistence_mode": false,
+          "total_memory": 11178
+        }
+      ]
+    },
+    "hostname": "jupyter-zhangs",
+    "os": [
+      "Linux",
+      "Linux-4.15.0-32-generic-x86_64-with-debian-stretch-sid"
+    ],
+    "python_version": "3.6.9"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [
+        "env_args.map_name=6h_vs_8z"
+      ],
+      "help": false,
+      "with": true
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2020-02-19T22:48:04.079570",
+  "status": "INTERRUPTED",
+  "stop_time": "2020-02-19T22:52:13.140847"
+}

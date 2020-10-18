@@ -1,0 +1,411 @@
+[INFO 22:48:01] pymarl Running command 'my_main'
+[INFO 22:48:01] pymarl Started run with ID "3"
+[DEBUG 22:48:01] my_main Started
+[INFO 22:48:01] my_main Experiment Parameters:
+[INFO 22:48:01] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_action_decoder': 'rnn_action_decoder',
+    'agent_output_type': 'q',
+    'batch_size': 32,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'delta': 0.03,
+    'double_q': True,
+    'env': 'sc2',
+    'env_args': {   'continuing_episode': False,
+                    'debug': False,
+                    'difficulty': '7',
+                    'game_version': None,
+                    'heuristic_ai': False,
+                    'map_name': '2c_vs_64zg',
+                    'move_amount': 2,
+                    'obs_all_health': True,
+                    'obs_instead_of_state': False,
+                    'obs_last_action': False,
+                    'obs_own_health': True,
+                    'obs_pathing_grid': False,
+                    'obs_terrain_height': False,
+                    'obs_timestep_number': False,
+                    'replay_dir': '',
+                    'replay_prefix': '',
+                    'reward_death_value': 10,
+                    'reward_defeat': 0,
+                    'reward_negative_scale': 0.5,
+                    'reward_only_positive': True,
+                    'reward_scale': True,
+                    'reward_scale_rate': 20,
+                    'reward_sparse': False,
+                    'reward_win': 200,
+                    'seed': 561831427,
+                    'state_last_action': True,
+                    'state_timestep_number': False,
+                    'step_mul': 8},
+    'epsilon_anneal_time': 50000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'fresh_limit': 6,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'q_learner_2c_vs_64zg',
+    'learner_log_interval': 20000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 20000,
+    'loss_level': 'heavy',
+    'lower_bound': -0.9,
+    'lr': 0.0005,
+    'mac': 'basic_mac_2c_vs_64zg',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'vdn_smac_parallel',
+    'num_bits': 8,
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_action_decoder_dim': 16,
+    'rnn_hidden_dim': 64,
+    'runner': 'parallel',
+    'runner_log_interval': 20000,
+    'save_model': True,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 561831427,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'test_greedy': True,
+    'test_interval': 20000,
+    'test_nepisode': 24,
+    'transmit_limit': 6,
+    'upper_bound': 1.0,
+    'use_cuda': True,
+    'use_tensorboard': False}
+
+[INFO 22:48:05] my_main Beginning training for 10050000 timesteps
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 18990 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-e6zjkylx/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 20849 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-ezu7ipgr/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 16105 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-2asit1ga/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 17576 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-73mu9wpm/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 23159 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-r8qrxdwk/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 19405 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-ovu333g9/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 20664 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-gglkiv7u/ -eglpath libEGL.so
+[INFO 22:48:05] absl Launching SC2: /home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64 -listen 127.0.0.1 -port 20986 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-u9f7ju2a/ -eglpath libEGL.so
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:18990/sc2api, attempt: 0, running: True
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:20849/sc2api, attempt: 0, running: True
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:17576/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 18990 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-e6zjkylx/ -eglpath libEGL.so'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 20849 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-ezu7ipgr/ -eglpath libEGL.so'
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 17576 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-73mu9wpm/ -eglpath libEGL.so'
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:16105/sc2api, attempt: 0, running: True
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:19405/sc2api, attempt: 0, running: True
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:23159/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:20664/sc2api, attempt: 0, running: True
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 23159 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-r8qrxdwk/ -eglpath libEGL.so'
+[INFO 22:48:05] absl Connecting to: ws://127.0.0.1:20986/sc2api, attempt: 0, running: True
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 16105 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-2asit1ga/ -eglpath libEGL.so'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 19405 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-ovu333g9/ -eglpath libEGL.so'
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 20664 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-gglkiv7u/ -eglpath libEGL.so'
+Version: B69232 (SC2.4.6-Publish)
+Build: Oct 23 2018 01:43:04
+Command Line: '"/home/jovyan/tmc_repo/3rdparty/StarCraftII/Versions/Base69232/SC2_x64" -listen 127.0.0.1 -port 20986 -dataDir /home/jovyan/tmc_repo/3rdparty/StarCraftII/ -tempDir /tmp/sc-u9f7ju2a/ -eglpath libEGL.so'
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Starting up...
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+Startup Phase 1 complete
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:18990/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:20849/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:17576/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:16105/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:19405/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:23159/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:20664/sc2api, attempt: 1, running: True
+[INFO 22:48:06] absl Connecting to: ws://127.0.0.1:20986/sc2api, attempt: 1, running: True
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Successfully loaded EGL library!
+Successfully loaded EGL library!
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+CreateInitializedEGLDisplay Failed.
+CreateInitializedEGLDisplay Failed.
+Failed to initialize GL framework
+Failed to initialize GL framework
+Creating stub renderer...
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Successfully loaded EGL library!
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+CreateInitializedEGLDisplay Failed.
+Failed to initialize GL framework
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Successfully loaded EGL library!
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+CreateInitializedEGLDisplay Failed.
+Failed to initialize GL framework
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Successfully loaded EGL library!
+Successfully loaded EGL library!
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+CreateInitializedEGLDisplay Failed.
+CreateInitializedEGLDisplay Failed.
+Failed to initialize GL framework
+Failed to initialize GL framework
+Creating stub renderer...
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Successfully loaded EGL library!
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+CreateInitializedEGLDisplay Failed.
+Failed to initialize GL framework
+Creating stub renderer...
+Startup Phase 2 complete
+Attempting to initialize EGL from file libEGL.so ...
+Successfully loaded EGL library!
+Failed to create and initialize a valid EGL display! Devices tried: 0
+
+CreateInitializedEGLDisplay Failed.
+Failed to initialize GL framework
+Creating stub renderer...
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:20849/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:18990/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:17576/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:16105/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:19405/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:23159/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:20664/sc2api, attempt: 2, running: True
+[INFO 22:48:07] absl Connecting to: ws://127.0.0.1:20986/sc2api, attempt: 2, running: True
+Listening on: 127.0.0.1:20664
+Listening on: 127.0.0.1:20986
+Listening on: 127.0.0.1:19405
+Listening on: 127.0.0.1:17576
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:23159
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:18990
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:20849
+Startup Phase 3 complete. Ready for commands.
+Listening on: 127.0.0.1:16105
+Startup Phase 3 complete. Ready for commands.
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:17576/sc2api, attempt: 3, running: True
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:20849/sc2api, attempt: 3, running: True
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:18990/sc2api, attempt: 3, running: True
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:16105/sc2api, attempt: 3, running: True
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:19405/sc2api, attempt: 3, running: True
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:20986/sc2api, attempt: 3, running: True
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:23159/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+[INFO 22:48:08] absl Connecting to: ws://127.0.0.1:20664/sc2api, attempt: 3, running: True
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Requesting to join a single player game
+Configuring interface options
+Entering load game phase.
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Entering load game phase.
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Game has started.
+Game has started.
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+Sending ResponseJoinGame
+Game has started.
+Sending ResponseJoinGame
+[INFO 22:48:16] my_main t_env: 258 / 10050000
+[INFO 22:48:16] my_main Estimated time left: 1 hours, 31 minutes, 41 seconds. Time passed: 11 seconds
+[INFO 22:48:21] my_main Saving models to results/models/vdn_smac_parallel__2020-02-19_22-48-01/258
+[INFO 22:48:54] my_main Updated target network
+[INFO 22:49:28] my_main Updated target network
+[INFO 22:50:01] my_main Updated target network
+[INFO 22:50:03] my_main Recent Stats | t_env:      20141 | Episode:      616
+battle_won_mean:           0.0000	ep_length_mean:           32.2500	epsilon:                   1.0000	grad_norm:                13.6362
+loss:                      0.6961	q_taken_mean:              0.0616	return_mean:               8.8720	return_std:                1.2073
+target_mean:               0.4129	td_error_abs:              0.7056	test_battle_won_mean:      0.0000	test_ep_length_mean:      33.8750
+test_return_mean:         10.2067	test_return_std:           1.4591	
+[INFO 22:50:04] my_main t_env: 20394 / 10050000
+[INFO 22:50:04] my_main Estimated time left: 14 hours, 56 minutes, 13 seconds. Time passed: 1 minutes, 59 seconds
+[INFO 22:50:40] my_main Updated target network
+[INFO 22:51:14] my_main Updated target network
+[INFO 22:51:46] my_main Updated target network
+[INFO 22:51:49] my_main t_env: 40407 / 10050000
+[INFO 22:51:49] my_main Estimated time left: 14 hours, 38 minutes, 35 seconds. Time passed: 3 minutes, 44 seconds
+[INFO 22:51:54] my_main Recent Stats | t_env:      40407 | Episode:     1232
+battle_won_mean:           0.0000	ep_length_mean:           32.6181	epsilon:                   0.2373	grad_norm:                11.6991
+loss:                      0.5420	q_taken_mean:              0.4040	return_mean:               9.2572	return_std:                1.4424
+target_mean:               0.7020	td_error_abs:              0.6195	test_battle_won_mean:      0.0000	test_ep_length_mean:      33.3750
+test_return_mean:         10.1259	test_return_std:           1.5063	
