@@ -131,7 +131,6 @@ class BasicMAC_6h_vs_8z:
         agent_outs, self.hidden_states = self.agent(agent_inputs, self.hidden_states)    # this is (48,98)!!!!!!!!!
         # Softmax the agent outputs if they're policy logits
         if self.agent_output_type == "pi_logits":
-            print('does not enterring here!!!!!!!!!!!!!!')
             if getattr(self.args, "mask_before_softmax", True):
                 # Make the logits for unavailable actions very negative to minimise their affect on the softmax
                 reshaped_avail_actions = avail_actions.reshape(ep_batch.batch_size * self.n_agents, -1)
