@@ -22,9 +22,9 @@ To train the model(s) in the paper, run this command:
 python3 src/main.py --config=xxx --env-config=sc2 with env_args.map_name=xxx
 ```
 
-> 📋--config can be one of the following six options: qmix_3s_vs_4z, qmix_3s_vs_5z, qmix_6h_vs_8z. For example 'qmix_6h_vs_8z' means 6h_vs_8z map with QMIX as the mixing network.
+> 📋--config can be one of the following three options: qmix_3s_vs_4z, qmix_3s_vs_5z, qmix_6h_vs_8z. For example 'qmix_6h_vs_8z' means 6h_vs_8z map with QMIX as the mixing network.
 
-> 📋--env_args.map_name can be one of the following six options: 3s_vs_4z, 3s_vs_5z, 6h_vs_8z. 
+> 📋--env_args.map_name can be one of the following three options: 3s_vs_4z, 3s_vs_5z, 6h_vs_8z. 
 
 
 ## Code Explanation
